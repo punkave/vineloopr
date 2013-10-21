@@ -1,7 +1,6 @@
 var passport = require('passport');
 var vine = require('vinelib');
 var url = require('url');
-var config = require('../config');
 
 module.exports = function(req, res) {
 
