@@ -4,7 +4,31 @@
 
 
 {% block main %}
-  <video id="vine" width="800" height="600" controls="false" autoplay="true">
-	</video>
-	<p id="description"></p>
+	<div id="app" class="hidden">
+		<h1 id="title"></h1>
+
+	  <video id="vine" width="800" height="600" controls="false" autoplay="true">
+		</video>
+		<p id="description"></p>
+		<div id="settings-edit">Settings</div>
+	</div>
+
+	<div id="settings" class="modal-start">
+		<span class="close">X</span>
+		<h2>Welcome to VineLoopr</h2>
+		<p>Enter a Vine login and a tag you would like to loop vines of. Vines with that tag will loop endlessly and new vines with that tag will get added to the loop every 30 seconds.</p>
+		<p id="error" class="hidden">Please fill out all the fields</p>
+		<form name="settings-form" id="settings-form">
+			<input id="username" name="username" type="text" placeholder="Username"><br>
+			<input id="password" name="password" type="password" placeholder="Password"><br>
+			<input id="tag" name="tag" type="text" placeholder="Tag"><br>
+			<input id="page-title" name="page-title" type="text" placeholder="Page Title (optional)"><br>
+			<input id="bgcolor" name="bgcolor" type="text" placeholder="Background Color (optional)"><br>
+			<input id="remember" name="remember" type="checkbox">
+			<label for="remember">Remember my settings</label><br>
+			<input type="submit" value="Loop!">
+		</form>
+	</div>
+
+	
 {% endblock %}

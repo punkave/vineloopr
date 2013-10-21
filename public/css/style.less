@@ -1,7 +1,7 @@
 body {
   // padding: 50px;
   background: black;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px Helvetica, Arial, sans-serif;
   color: white;
 }
 
@@ -21,4 +21,120 @@ h1 {
 }
 #description{
 	text-align: center;
+}
+
+#settings{
+	width: 500px;
+	height: 650px;
+	background-color: #EFEFEF;
+	border: 1px solid #FFFFFF;
+	.rounded-corners;
+	color: #555;
+	position: absolute;
+	right: 25px;
+	bottom: 100px;
+
+	h2{
+		font-size: 28px;
+		text-align: center;
+	}
+
+	p{
+		padding: 6px;
+		text-align: center;
+	}
+
+	#error{
+		color: red;
+		margin: 0;
+	}
+
+	form{
+		text-align: center;
+	}
+	input{
+		border: 5px solid white; 
+    	-webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 6px auto;
+	  font-size: 14px;
+		color: #555;
+
+    
+		&[type=text],
+		&[type=password]{
+	    width: 400px;
+		}
+
+		&[type=submit]{
+			width: 200px;
+		}
+
+	}
+
+	&.modal-start{
+		left: 50%;
+		top: 50%;
+		margin-left: -250px;
+		margin-top: -325px;
+
+		.close {
+			display: none;
+		}
+	}
+
+	.close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+	}
+
+}
+
+#settings-edit{
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	background: url('/images/gear.png');
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	right: 25px;
+	bottom: 25px;
+	cursor: pointer;
+}
+
+.modal-settings{
+	h2,
+	p{
+		display: none;
+	}
+}
+
+
+
+.hidden {
+	display: none;
+}
+
+.box-shadow-white(){
+
+}
+
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
 }

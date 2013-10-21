@@ -69,7 +69,7 @@ app.configure(function(){
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.cookieParser('your secret here'));
+  app.use(express.cookieParser('I like big butts and I cannot lie'));
   app.use(express.session());
 
   app.use(passport.initialize());

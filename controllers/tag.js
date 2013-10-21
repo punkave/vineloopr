@@ -4,12 +4,20 @@ var url = require('url');
 var config = require('../config');
 
 module.exports = function(req, res) {
-	var parts = url.parse(req.url);
+
+	if (req.body.username){
+		req.session.username = req.body.username;
+	}
+	
+	if (req.body.password){
+		req.session.password = req.body.password;
+	}
+
 	vine.login({
-	  username: config.account.username
-	  , password: config.account.password
+	  username: req.session.username,
+		password: req.session.password
 	}, function (login) {
-		vine.getTag(req.params[0], function (tags) {
+		vine.getTag(req.body.tag, function (tags) {
 		    res.send(tags);
 		})
 	});

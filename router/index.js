@@ -5,7 +5,7 @@ module.exports = function (app, options) {
 
   app.get('/', require('../controllers/index'));
 
-  app.get('/tag/*', require('../controllers/tag'));
+  app.post('/vine/tag', require('../controllers/tag'));
 
   //user stuff
   app.get('/register', require('../controllers/register'));
