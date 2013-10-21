@@ -1,4 +1,4 @@
-node-boilerplate-users
-======================
+VineLoopr
+================
 
-Same as my node boilerplate but with support for user accounts using passport local strategy and bcrypt for salty, hashy passwords.
+A web app that loops over vines of a specific tag, and will add new vines with that tag to the loop automatically.
